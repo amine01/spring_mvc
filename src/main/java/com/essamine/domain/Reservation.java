@@ -1,16 +1,18 @@
 package com.essamine.domain;
 
 public class Reservation {
-	private String CourtName;
+	private String courtName;
 	private Player player;
 	private SportType sportType;
 
+	
+
 	public String getCourtName() {
-		return CourtName;
+		return courtName;
 	}
 
 	public void setCourtName(String courtName) {
-		CourtName = courtName;
+		this.courtName = courtName;
 	}
 
 	public Player getPlayer() {
@@ -30,7 +32,7 @@ public class Reservation {
 	}
 
 	public Reservation(String courtName, Player player, SportType sportType) {
-		CourtName = courtName;
+		this.courtName = courtName;
 		this.player = player;
 		this.sportType = sportType;
 	}

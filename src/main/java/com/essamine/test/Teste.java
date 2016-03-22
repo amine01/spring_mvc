@@ -7,7 +7,7 @@ public class Teste {
 
 	public static void main(String[] args) {
 		ReservationService reservationService=new ReservationServiceImpl();
-		System.out.println(reservationService.listReservation("Walo").size());
+		System.out.println(reservationService.listReservation("Walo").get(0).getPlayer().getName());
 
 	}
 

@@ -35,7 +35,12 @@
 			<artifactId>spring-web</artifactId>
 			<version>3.1.1.RELEASE</version>
 		</dependency>
-
+		<!-- jstl -->
+		<dependency>
+			<groupId>jstl</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
 	</dependencies>
 	<build>
 		<finalName>spring_mvc</finalName>
