@@ -2,6 +2,7 @@ package com.essamine.controllers;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,13 +11,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.essamine.domain.Reservation;
 import com.essamine.service.ReservationService;
-import com.essamine.service.ReservationServiceImpl;
 
 @Controller
 @RequestMapping("/reservation")
 public class ControllerOne {
 
-	ReservationService reservationService = new ReservationServiceImpl();
+	@Autowired
+	ReservationService reservationService;
 
 	public ControllerOne() {
 	}

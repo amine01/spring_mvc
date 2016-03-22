@@ -29,10 +29,5 @@
 
 		</table>
 	</c:if>
-	<%-- 	<c:forEach items="${reservationsQ}" var="reservation">
-		
-	</c:forEach> --%>
-
-
 </body>
 </html>
