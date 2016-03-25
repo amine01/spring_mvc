@@ -11,6 +11,16 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 
+	<!-- injection -->
 	<bean class="com.essamine.service.ReservationServiceImpl" id="reservationService" />
+	<bean class="com.essamine.interceptors.TimeInterceptor" id="timeInterceptor" />
+	<bean
+		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+		<property name="interceptors">
+			<list>
+				<ref bean="timeInterceptor" />
+			</list>
+		</property>
+	</bean>
 
 </beans>

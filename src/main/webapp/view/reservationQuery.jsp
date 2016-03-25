@@ -6,6 +6,7 @@
 </head>
 <body>
 	<h1>Reservation Query :</h1>
+	<h3>Handling Time : ${handlingTime}</h3>
 	<form action="reservation" method="post">
 		<ul>
 			<li>Court Name :<input type="text" name="courtName"></li>
