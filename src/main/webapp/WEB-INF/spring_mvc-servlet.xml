@@ -13,12 +13,26 @@
 
 	<!-- injection -->
 	<bean class="com.essamine.service.ReservationServiceImpl" id="reservationService" />
+
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<!-- <property name="defaultLocale" value="en" /> -->
+	</bean>
+	<!-- interceptors -->
+	<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+		id="localeChangeInterceptor">
+		<property name="paramName" value="language" />
+	</bean>
 	<bean class="com.essamine.interceptors.TimeInterceptor" id="timeInterceptor" />
+	<!-- Fin intercepters -->
+
 	<bean
 		class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
 		<property name="interceptors">
 			<list>
 				<ref bean="timeInterceptor" />
+				<ref bean="localeChangeInterceptor" />
 			</list>
 		</property>
 	</bean>

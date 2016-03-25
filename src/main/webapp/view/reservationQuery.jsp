@@ -7,6 +7,7 @@
 <body>
 	<h1>Reservation Query :</h1>
 	<h3>Handling Time : ${handlingTime}</h3>
+	<h3>Language : ${pageContext.response.locale}</h3>
 	<form action="reservation" method="post">
 		<ul>
 			<li>Court Name :<input type="text" name="courtName"></li>
@@ -27,7 +28,6 @@
 					<td>${reservation.sportType.name}</td>
 				</tr>
 			</c:forEach>
-
 		</table>
 	</c:if>
 </body>
